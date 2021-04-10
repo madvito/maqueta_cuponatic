@@ -5,12 +5,12 @@
   margin: 0;
 }
 body{
-  background-color: #F1F1F1;
+  /* background-color: #F1F1F1; */
 
 }
 h2{
   font-size: 20px;
-  margin: 16.6px 0;
+  /* margin: 16.6px 0; */
 }
 h3{
   color: #FFFFFF;
@@ -21,6 +21,13 @@ h3{
   width: 414px;
   overflow-y:scroll;
   overflow-x: auto;
+}
+/* -----------UTILITARY----------- */
+.bg-grey{
+  background-color: #F1F1F1;
+}
+.bg-white{
+  background-color: #FFFFFF;;
 }
 /* -----------HEADER----------- */
 .header{
@@ -62,7 +69,8 @@ h3{
   width: 374px;
   border-radius: 6px;
   border: 1px solid #D4D4D4;
-  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.07217);
+  /* box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.07217); */
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.16);
   margin: 6px;
 }
 
@@ -73,7 +81,6 @@ h3{
 }
 
 .card-content{
-  height: fit-content;
   padding: 0 20px;
 }
 
@@ -82,12 +89,14 @@ h3{
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+  /* margin: 16.6px 0; */
+  margin: 20px 0 20px 0;
 }
 
 .pricetag{
   display: flex;
-  margin-bottom: 20px;
-  
+  /* margin-bottom: 20px; */
+  margin-bottom: 23px;
 }
 .discount{
   display: flex;
@@ -155,4 +164,51 @@ h3{
   height: 100%;
   width: 100%;
   object-fit: fill;
+}
+/* -----------MENU CARDS----------- */
+.search-options-header{
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+.search-options-header-title{
+display: flex;
+/* padding: 12px 6px 7px 6px; */
+margin: 50px 30px;
+align-items: center;
+}
+.search-options-header-title h2{
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 26px;
+  color: #545454;
+  padding-left: 15px;
+}
+
+.search-options-close-button{
+  height: 15px;
+  width: 16px;
+  padding: 37px 21px;
+}
+.order-options div{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.107143px;
+  color: #78787A;
+  padding-left: 60px;
+  border-bottom: 1px solid #D8D8D8;
+}
+/* .order-options-button{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.107143px;
+  color: #78787A;
+  padding-left: 60px;
+  border-bottom: 1px solid #D8D8D8;
+} */
+.order-options div:first-child{
+  border-top: 1px solid #D8D8D8;
 }

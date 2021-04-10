@@ -5,7 +5,7 @@ import CardList from '../components/CardList';
 
 const MovileSearch = () => {
     return (
-        <div className='mobile-format'>
+        <div className='mobile-format bg-grey'>
             <Header />
             <Links />
             <CardList/>

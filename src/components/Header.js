@@ -13,8 +13,6 @@ const Header = () => {
             <Link to='/'><CuponaticLogo/></Link>
             <HeaderButton Icon={Lupa} text='Buscar'/>
             <HeaderButton Icon={Cuenta} text='Cuenta'/>
-            {/* <h3>Menu</h3><h3>CUPONATIC</h3><h3>Buscar</h3><h3>Cuenta</h3> */}
-            
 
         </nav>
     )
