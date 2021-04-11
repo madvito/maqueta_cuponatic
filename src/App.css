@@ -5,6 +5,7 @@
   margin: 0;
 }
 
+
 .mobile-format{
   background-color: #F1F1F1;
   /* height: 715px; */
@@ -12,13 +13,34 @@
   /* max-height: 715px; */
   /* min-width: 401px; */
   /* max-width: 414px; */
-  /* width: 414px; */
-  max-width: 100%;
+  width: 414px;
+  /* max-width: 100%; */
   overflow-y:scroll;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none; 
 }
+
+@media screen and (min-width: 415px){
+  .mobile-format{
+    background-color: #F1F1F1;
+    /* height: 715px; */
+    height: 100vh;
+    /* max-height: 715px; */
+    /* min-width: 401px; */
+    /* max-width: 414px; */
+    /* width: 414px; */
+    width: 100%;
+    /* overflow-y:scroll;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  */
+  }
+}
+
+
+
+
 .mobile-format::-webkit-scrollbar{display: none};
 /* -----------UTILITARY----------- */
 
@@ -27,8 +49,8 @@
 }
 /* -----------HEADER----------- */
 .header{
-  width: 422;
-  height: 100;
+  /* width: 422;
+  height: 100; */
   background-color: #0094DE;
   display: flex;
   justify-content: space-around;
@@ -56,7 +78,7 @@
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
-  /* position: relative; */
+  position: relative;
 }
 /* -----------CARDLIST----------- */
 .card-list{
@@ -240,29 +262,92 @@ align-items: center;
 /* -----------MODAL ANIMATION----------- */
 .modal{
   background-color: #FFFFFF;
-  width: 100%;
-
+  width: 414px;
+  z-index: 1000;
   position: absolute;
   /* left: -100vh; */
-  left: -100%;
+  left: -414px;
   -webkit-transition: -webkit-transform .5s ease-out;
   -moz-transition: -moz-transform .5s ease-out;
   transition: transform .5s ease-out;
 }
 
 .modal-right{
+  -webkit-transform: translate(414px);
+  -moz-transform: translate(414px);
+  transform: translate(414px);
   /* -webkit-transform: translate(100vh);
   -moz-transform: translate(100vh);
   transform: translate(100vh); */
-  -webkit-transform: translate(100%);
+  /* -webkit-transform: translate(100%);
   -moz-transform: translate(100%);
-  transform: translate(100%);
+  transform: translate(100%); */
 }
 .modal-left{
+  -webkit-transform: translate(-414px);
+  -moz-transform: translate(-414px);
+  transform: translate(-414px);
   /* -webkit-transform: translate(-100vh);
   -moz-transform: translate(-100vh);
   transform: translate(-100vh); */
-  -webkit-transform: translate(-100%);
+  /* -webkit-transform: translate(-100%);
   -moz-transform: translate(-100%);
-  transform: translate(-100%);
+  transform: translate(-100%); */
 }
+@media screen and (min-width: 415px){
+  .modal{
+    /* background-color: #FFFFFF; */
+    width: 100%;
+    /* z-index: 1000; */
+    position: absolute;
+    /* left: -100vh; */
+    left: -100%;
+    /* -webkit-transition: -webkit-transform .5s ease-out;
+    -moz-transition: -moz-transform .5s ease-out;
+    transition: transform .5s ease-out; */
+  }
+  .modal-right{
+    /* -webkit-transform: translate(100vh);
+    -moz-transform: translate(100vh);
+    transform: translate(100vh); */
+    -webkit-transform: translate(100%);
+    -moz-transform: translate(100%);
+    transform: translate(100%);
+  }
+  .modal-left{
+    /* -webkit-transform: translate(-100vh);
+    -moz-transform: translate(-100vh);
+    transform: translate(-100vh); */
+    -webkit-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+/* .modal{ */
+  /* background-color: #FFFFFF;
+  width: 414px;
+  z-index: 1000;
+  position: absolute;
+  left: -100vh;
+  /* left: -414px; */
+  /* -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  transition: transform .5s ease-out; */ 
+/* } */
+
+/* .modal-right{ */
+  /* -webkit-transform: translate(100vh);
+  -moz-transform: translate(100vh);
+  transform: translate(100vh); */
+  /* -webkit-transform: translate(100%);
+  -moz-transform: translate(100%);
+  transform: translate(100%); */
+/* } */
+/* .modal-left{
+  -webkit-transform: translate(-100vh);
+  -moz-transform: translate(-100vh);
+  transform: translate(-100vh); */
+  /* -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  transform: translate(-100%); */
+/* } */

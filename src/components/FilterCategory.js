@@ -18,7 +18,7 @@ const FilterCategory = ({title, children}) => {
             className="filter-options-title"
             onClick={()=>handleToggle()}
         >
-            <div className="">{title}</div><div className="filter-arrow-down"><ArrowDown /></div>
+            <div>{title}</div><div className="filter-arrow-down"><ArrowDown /></div>
         </div>
         {
             toggle && children

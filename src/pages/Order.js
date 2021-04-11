@@ -1,4 +1,5 @@
 import React,{useState, useEffect, useContext} from 'react';
+import ReactDom from 'react-dom';
 import ArrowLeft from '../components/icons/ArrowLeft';
 import X from '../components/icons/x.png';
 import OptionButton from '../components/OptionButton';
