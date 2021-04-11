@@ -3,6 +3,7 @@ import Star from './icons/Star'
 
 const Card = ({cardData}) => {
     const {offerTitle, discountPrice, originalPrice, discount, location, rating} = cardData;
+    console.log(rating);
     return (
         <div className="card">
             <div className="card-image">
@@ -45,9 +46,9 @@ const Card = ({cardData}) => {
                 {/* <p className="rating">
                    <Star/> 4.3 (81)
                 </p> */}
-                <p className="rating">
-                   <Star/> {rating}
-                </p>
+                <section className="rating">
+                   <Star className='star'/><p> {rating[0]} <span>{rating[1]}</span></p>
+                </section>
             </footer>
         </div>
     )
