@@ -11,12 +11,12 @@ const MovileSearch = () => {
     const {orderModalOn, filterModalOn} = useContext(ModalContext);
 
     const links = [
-        [Orden,orderModalOn, null],
-        [Filtros,filterModalOn,null],
-        [Mapa, null, '/map']
+        [Orden,orderModalOn, null,'ms1'],
+        [Filtros,filterModalOn,null,'ms2'],
+        [Mapa, null, '/map','ms3']
     ]
     return (
-        <div className='mobile-format bg-grey'>
+        <div className='mobile-format'>
             <Header />
             <Links links={links}/>
             <CardList/>

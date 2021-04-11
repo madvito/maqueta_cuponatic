@@ -17,15 +17,15 @@ const MapSearch = () => {
     //     [Galeria,'/', null]
     // ]
     const links = [
-        [Orden,orderModalOn,null],
-        [Filtros,filterModalOn, null],
-        [Galeria, null, '/']
+        [Orden,orderModalOn,null,'m1'],
+        [Filtros,filterModalOn, null,'m2'],
+        [Galeria, null, '/','m3']
     ]
 
     return (
-        <div className='mobile-format bg-grey'>
+        <div className='mobile-format'>
             <Header />
-            <Links links={links}/>
+            <Links links={links} linksStyle={'map-shadow'}/>
             <img className='map' src={mocap_map} alt="Map Mocap"/>
         </div>
     )
