@@ -1,8 +1,9 @@
-import React,{useState} from 'react';
-import {Redirect} from 'react-router-dom';
+import React,{useState, useEffect, useContext} from 'react';
+// import {Redirect} from 'react-router-dom';
 import ArrowLeft from '../components/icons/ArrowLeft';
 import X from '../components/icons/x.png';
 import OptionButton from '../components/OptionButton';
+import { ModalContext } from '../context/ModalContext';
 
 const Order = () => {
     const buttonList = [
@@ -11,18 +12,31 @@ const Order = () => {
         ['Lo más nuevo', 'options-button'],
         ['Distancia', 'options-button']
     ]
+
+    const {modalsOff} = useContext(ModalContext);
+    const [modalStyle, setModalStyle] = useState('mobile-format bg-white order-modal')
     const [buttons, setButtons] = useState(buttonList);
-    const [close, setClose] = useState(false);
+    // const [close, setClose] = useState(false);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setModalStyle(modalStyle + ' modal-right')
+        },0);
+    },[]);
+
+
 
     const handleX = () =>{
-        setClose(true)
+        // setClose(true)
+        modalsOff();
     }
-    if(close){
-        return <Redirect to='/'/>
-    }
+    // if(close){
+    //     return <Redirect to='/'/>
+    // }
     
     return (
-        <div className='mobile-format bg-white'>
+        <div className={modalStyle}>
+        {/* <div className='mobile-format bg-white order-modal'> */}
             <header className='search-options-header'>
                 <div className="search-options-header-title">
                 <ArrowLeft/><h2>Ordenar por</h2>

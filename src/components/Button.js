@@ -3,9 +3,16 @@ import React from 'react';
 
 
 
-const Button = ({children, url = null, func = null}) => {
+const Button = ({children, func = null}) => {
+    const handleClick=() => {
+        if (func){
+            func();
+        }else{
+            return;
+        }
+    }
     return (
-        <div className='button'>
+        <div onClick={()=>handleClick()} className='button'>
             {children}
         </div>
     )

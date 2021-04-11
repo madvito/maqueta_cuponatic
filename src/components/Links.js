@@ -8,7 +8,14 @@ const Links = ({links}) => {
             {
                 links.map((link, index)=>{
                     const Component = link[0];
-                    return <Link to={link[1]} key={index}><Button><Component /></Button></Link>
+                    const func = link[1];
+                    const linkTo = link[2];
+                    if(linkTo){
+                        return <Link to={linkTo} key={index}><Button><Component /></Button></Link>
+                    }else if(func){
+                        return <Button func={func}><Component /></Button>
+                    }
+                    
                 })
             }
         </nav>
