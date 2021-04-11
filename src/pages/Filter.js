@@ -1,12 +1,10 @@
 import React, {useState, useEffect,useContext} from 'react';
-// import {Redirect} from 'react-router-dom';
 import FilterCategory from '../components/FilterCategory'
 import ArrowLeft from '../components/icons/ArrowLeft';
 import X from '../components/icons/x.png';
 import { ModalContext } from '../context/ModalContext';
 
 const Filter = () => {
-    // const [close, setClose] = useState(false);
     const categories = [
         ['Categorías', ['Categía 1','Categía 2','Categía 3']],
         ['Comunas', ['Comuna 1','Comuna 2','Comuna 3']],
@@ -15,27 +13,30 @@ const Filter = () => {
     ]
 
     const {modalsOff} = useContext(ModalContext);
-    const [modalStyle, setModalStyle] = useState('mobile-format bg-white filter-modal')
+    const [modalStyle, setModalStyle] = useState('mobile-format bg-white modal')
 
     useEffect(()=>{
-        setTimeout(()=>{
-            setModalStyle(modalStyle + ' modal-right')
-        },0);
+            setTimeout(()=>{
+                setModalStyle(modalStyle + ' modal-right')
+            },0);
     },[]);
 
+    const handleLeftArrow = () =>{
+        setModalStyle(modalStyle + ' modal-left');
+        setTimeout(() => {
+            modalsOff()
+        }, 501);
+    }
+
     const handleX = () =>{
-        // setClose(true)
         modalsOff()
     }
-    // if(close){
-    //     return <Redirect to='/'/>
-    // }
+
     return (
         <div className={modalStyle}>
-        {/* <div className='mobile-format bg-white filter-modal'> */}
             <header className='search-options-header'>
                 <div className="search-options-header-title">
-                <ArrowLeft/><h2>Filtrar por</h2>
+                <div onClick={()=>handleLeftArrow()}><ArrowLeft/></div><h2>Filtrar por</h2>
                 </div>
                 <img className='search-options-close-button' src={X} alt="" onClick={()=>handleX()}/>
                 

@@ -8,12 +8,8 @@ import Orden from '../components/icons/Orden';
 import { ModalContext } from '../context/ModalContext';
 
 const MovileSearch = () => {
-    const {modalsOff, orderModalOn, filterModalOn} = useContext(ModalContext);
-    // const links = [
-    //     [Orden,'/order'],
-    //     [Filtros,'/filter'],
-    //     [Mapa,'/map']
-    // ]
+    const {orderModalOn, filterModalOn} = useContext(ModalContext);
+
     const links = [
         [Orden,orderModalOn, null],
         [Filtros,filterModalOn,null],

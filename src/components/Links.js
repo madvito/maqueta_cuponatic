@@ -11,11 +11,11 @@ const Links = ({links}) => {
                     const func = link[1];
                     const linkTo = link[2];
                     if(linkTo){
-                        return <Link to={linkTo} key={index}><Button><Component /></Button></Link>
+                        return <label key={index}><Link  to={linkTo} ><Button><Component /></Button></Link></label>
                     }else if(func){
                         return <Button func={func}><Component /></Button>
                     }
-                    
+                    return null;
                 })
             }
         </nav>

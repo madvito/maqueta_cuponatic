@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import ModalProvider, {ModalContext} from './context/ModalContext'
+import {ModalContext} from './context/ModalContext'
 import './App.css';
 import Filter from './pages/Filter';
 import MapSearch from './pages/MapSearch';
@@ -10,10 +10,7 @@ import Order from './pages/Order';
 
 function App() {
   const {modals} = useContext(ModalContext);
-  // const [modals, setModals] = useState({
-  //   order: false,
-  //   filter: false
-  // })
+  
   let modal =''
   if(modals.order){
     modal = 'order';
@@ -23,12 +20,11 @@ function App() {
   }
   return (
     <Router>
-      {/* <Order/> */}
       {
-        modal =='order' && <Order/>
+        modal ==='order' && <Order/>
       }
       {
-        modal =='filter' &&<Filter/>
+        modal ==='filter' &&<Filter/>
       }
       <Switch>
         <Route exact path='/' component={MovileSearch}/>

@@ -13,11 +13,17 @@ h3{
 }
 .mobile-format{
   height: 715px;
-  max-height: 715px;
-  width: 414px;
+  /* max-height: 715px; */
+  /* min-width: 401px; */
+  /* max-width: 414px; */
+  /* width: 414px; */
+  max-width: 100%;
   overflow-y:scroll;
   overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
+.mobile-format::-webkit-scrollbar{display: none};
 /* -----------UTILITARY----------- */
 .bg-grey{
   background-color: #F1F1F1;
@@ -234,25 +240,48 @@ align-items: center;
 }
 
 /* -----------MODAL ANIMATION----------- */
-.order-modal{
+/* .order-modal{
   position: absolute;
   left: -100vh;
-  -webkit-transition: -webkit-transform 2s ease;
-  -moz-transition: -moz-transform 2s ease;
-  transition: transform 2s ease;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  transition: transform .5s ease-out;
  
-}
-.filter-modal{
+} */
+/* .filter-modal{
   position: absolute;
   left: -100vh;
-  -webkit-transition: -webkit-transform 2s ease;
-  -moz-transition: -moz-transform 2s ease;
-  transition: transform 2s ease;
-  
-  transform-origin: -100vh;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  transition: transform .5s ease-out;
+} */
+.modal{
+
+  width: 100%;
+
+  position: absolute;
+  /* left: -100vh; */
+  left: -100%;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  transition: transform .5s ease-out;
 }
+
+
+
 .modal-right{
-  -webkit-transform: translate(100vh);
+  /* -webkit-transform: translate(100vh);
   -moz-transform: translate(100vh);
-  transform: translate(100vh);
+  transform: translate(100vh); */
+  -webkit-transform: translate(100%);
+  -moz-transform: translate(100%);
+  transform: translate(100%);
+}
+.modal-left{
+  /* -webkit-transform: translate(-100vh);
+  -moz-transform: translate(-100vh);
+  transform: translate(-100vh); */
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  transform: translate(-100%);
 }
