@@ -7,7 +7,7 @@ import Mapa from '../components/icons/Mapa';
 import Orden from '../components/icons/Orden';
 import { ModalContext } from '../context/ModalContext';
 
-const MovileSearch = () => {
+const MobileSearch = () => {
     const {orderModalOn, filterModalOn} = useContext(ModalContext);
 
     const links = [
@@ -16,7 +16,7 @@ const MovileSearch = () => {
         [Mapa, null, '/map','ms3']
     ]
     return (
-        <div className='mobile-format'>
+        <div className='screen-format'>
             <Header />
             <Links links={links}/>
             <CardList/>
@@ -24,4 +24,4 @@ const MovileSearch = () => {
     )
 }
 
-export default MovileSearch
+export default MobileSearch

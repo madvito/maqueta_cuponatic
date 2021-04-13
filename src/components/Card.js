@@ -24,14 +24,13 @@ const Card = ({cardData}) => {
                         </p>
                     </div>
                 </div>
-                
             </div>
             <footer className='card-footer'> 
                 <p className="location">
                     {location}
                 </p>
                 <section className="rating">
-                   <Star className='star'/><p> {rating[0]} <span>{rating[1]}</span></p>
+                   <Star /><p>{rating[0]} <span>{rating[1]}</span></p>
                 </section>
             </footer>
         </div>

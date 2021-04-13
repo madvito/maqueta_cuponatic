@@ -4,7 +4,7 @@ const data = [
         discountPrice: '$5990',
         originalPrice: '$5990',
         discount: '43%',
-        location: '1.8km, Providencia',
+        location: '1.8 km, Providencia',
         rating: ['4.3','(81)']
     },
     {
@@ -12,7 +12,7 @@ const data = [
         discountPrice: '$5990',
         originalPrice: '$5990',
         discount: '43%',
-        location: '1.8km, Providencia',
+        location: '1.8 km, Providencia',
         rating: ['4.3','(81)']
     },
     

@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <nav className='header'>
             <HeaderButton Icon={Menu} text='Menu'/>
-            <Link to='/'><CuponaticLogo/></Link>
+            <Link className='cuponatic-logo' to='/'><CuponaticLogo/></Link>
             <HeaderButton Icon={Lupa} text='Buscar'/>
             <HeaderButton Icon={Cuenta} text='Cuenta'/>
 

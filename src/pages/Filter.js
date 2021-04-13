@@ -13,7 +13,7 @@ const Filter = () => {
     ]
 
     const {modalsOff} = useContext(ModalContext);
-    const [modalStyle, setModalStyle] = useState('mobile-format bg-white modal')
+    const [modalStyle, setModalStyle] = useState('screen-format modal')
 
     useEffect(()=>{
             setTimeout(()=>{

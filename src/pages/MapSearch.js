@@ -11,11 +11,6 @@ const MapSearch = () => {
 
     const { orderModalOn, filterModalOn} = useContext(ModalContext);
 
-    // const links = [
-    //     [Orden,'/order', modalsOff],
-    //     [Filtros,'/filter', modalsOff],
-    //     [Galeria,'/', null]
-    // ]
     const links = [
         [Orden,orderModalOn,null,'m1'],
         [Filtros,filterModalOn, null,'m2'],
@@ -23,7 +18,7 @@ const MapSearch = () => {
     ]
 
     return (
-        <div className='mobile-format'>
+        <div className='screen-format'>
             <Header />
             <Links links={links} linksStyle={'map-shadow'}/>
             <img className='map' src={mocap_map} alt="Map Mocap"/>

@@ -1,5 +1,4 @@
 import React,{useState, useEffect, useContext} from 'react';
-import ReactDom from 'react-dom';
 import ArrowLeft from '../components/icons/ArrowLeft';
 import X from '../components/icons/x.png';
 import OptionButton from '../components/OptionButton';
@@ -14,7 +13,7 @@ const Order = () => {
     ]
 
     const {modalsOff} = useContext(ModalContext);
-    const [modalStyle, setModalStyle] = useState('mobile-format bg-white modal')
+    const [modalStyle, setModalStyle] = useState('screen-format modal')
     const [buttons, setButtons] = useState(buttonList);
 
     useEffect(()=>{

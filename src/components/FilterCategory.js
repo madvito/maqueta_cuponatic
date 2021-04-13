@@ -10,8 +10,6 @@ const FilterCategory = ({title, children}) => {
         setToggle(!toggle);
     }
 
-    
-
     return (
         <>
         <div 
